@@ -1,0 +1,38 @@
+<%= form_for(@stumark) do |f| %>
+  <% if @stumark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stumark.errors.count, "error") %> prohibited this stumark from being saved:</h2>
+
+      <ul>
+      <% @stumark.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Full_Name %><br />
+    <%= f.text_field :Full_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Class %><br />
+    <%= f.number_field :Class %>
+  </div>
+  <div class="field">
+    <%= f.label :Mathematics %><br />
+    <%= f.number_field :Mathematics %>
+  </div>
+  <div class="field">
+    <%= f.label :Science %><br />
+    <%= f.number_field :Science %>
+  </div>
+  <div class="field">
+    <%= f.label :Social %><br />
+    <%= f.number_field :Social %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

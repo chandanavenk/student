@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Full_Name: MyString
+  Class: 1
+  Mathematics: 1
+  Science: 1
+  Social: 1
+  Total: 1
+
+two:
+  Full_Name: MyString
+  Class: 1
+  Mathematics: 1
+  Science: 1
+  Social: 1
+  Total: 1

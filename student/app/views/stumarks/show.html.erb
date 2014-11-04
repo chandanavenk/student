@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hi</b>
+  <%= @stumark.Full_Name %>
+</p>
+
+<p>
+  <b>Class:</b>
+  <%= @stumark.Class %>
+</p>
+
+<p>
+  <b>Your score in Mathematics:</b>
+  <%= @stumark.Mathematics %>
+</p>
+
+<p>
+  <b>Your score in Science:</b>
+  <%= @stumark.Science %>
+</p>
+
+<p>
+  <b>Your score in Social:</b>
+  <%= @stumark.Social %>
+</p>
+<p>
+<b>Your total marks obtained is:</b>
+<%= @stumark.Mathematics +  @stumark.Science  +  @stumark.Social %>
+</p>
+
+<p>
+<b>Your Average is:</b>
+<%=avg = ((@stumark.Mathematics +  @stumark.Science  +  @stumark.Social)/3)%>
+</p>
+
+<p>
+<b>Grade:</b>
+<% if avg>70
+        rank = "Distinction"
+    elsif (avg>60 and avg<69)
+        rank =  "First Class"
+    elsif (avg>50 and avg<59)
+        rank = "Second Class"
+    else
+        rank = "Fail"
+    end %>
+    <%= rank %>
+</p>
+
+<p>
+<%if rank == "Distinction"
+  wish = "Congratulations for scoring Distinction"
+elsif rank == "First Class"
+  wish = "Congratulations for scoring First Class"
+elsif rank == "Second Class"
+  wish = "Congratulations for scoring Second Class"
+  else 
+wish ="Betterluck next time"
+end %>
+<b><%= wish %> </b>
+</p>
+
+
+<!-- <p> -->
+  <!-- <b>Total:</b> -->
+  <!-- <%= @stumark.Total %> -->
+<!-- </p>
+ -->
+
+<%= link_to 'Edit', edit_stumark_path(@stumark) %> |
+<%= link_to 'Back', stumarks_path %>
